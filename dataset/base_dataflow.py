@@ -27,12 +27,12 @@ class JointsLoader:
 
     num_connections = 22
 
-    idx_in_coco = [0, lambda x: JointsLoader._get_neck(x, 5, 6), 6, 8,
-                   10, 5, 7, 9, 12, 14, 16, 11, 13, 15, 2, 1, 4, 3]
+    idx_in_coco = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
-    idx_in_coco_str = [
-        'Nose','Neck','RShoulder','RElbow','RWrist','LShoulder','LElbow','LWrist',
-        'RHip','RKnee','RAnkle','LHip','LKnee','LAnkle','REye','LEye','REar','LEar']
+    idx_in_coco_str = ["right_sholder_outer_point","right_sholder_inner_point","left_sholder_inner_point","left_sholder_outer_point"
+                      ,"right_chest_point","left_chest_point","right_waist_point","left_waist_point","right_natural_waist_point"
+                      ,"left_natural_waist_point","right_hip_point","left_hip_point","pants_crotch","right_thigh","left_thigh",
+                      "right_Knee_point","left_Knee_point","right_ankle_point","left_ankle_point","head_point","foot_color"]
 
     joint_pairs = list(zip(
         [1, 8, 9, 1, 11, 12, 1, 2, 3, 2, 1, 5, 6, 5, 1, 0, 0, 14, 15],
