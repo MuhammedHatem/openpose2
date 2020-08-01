@@ -21,22 +21,22 @@ class JointsLoader:
         else:
             return None
 
-    num_joints = 21
+    num_joints = 19
 
     num_joints_and_bkg = num_joints + 1
 
-    num_connections = 28
+    num_connections = 19
 
-    idx_in_coco = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    idx_in_coco = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
 
     idx_in_coco_str = ["right_sholder_outer_point","right_sholder_inner_point","left_sholder_inner_point","left_sholder_outer_point"
                       ,"right_chest_point","left_chest_point","right_waist_point","left_waist_point","right_natural_waist_point"
                       ,"left_natural_waist_point","right_hip_point","left_hip_point","pants_crotch","right_thigh","left_thigh",
-                      "right_Knee_point","left_Knee_point","right_ankle_point","left_ankle_point","head_point","foot_color"]
+                      "right_Knee_point","left_Knee_point","right_ankle_point","left_ankle_point"]
 
     joint_pairs = list(zip(
-        [12,12,12,16,15,13,12,13,14,10,8,6,4,10,11,8,9,6,7,4,5,0,3,0,2,1,19,19],
-        [16,15,20,18,17,12,14,15,16,11,9,7,5,13,14,10,11,8,9,6,7,4,5,1,3,19,2,12]))
+        [0,1,2,3,5,7,9,11,14,16,18,12,17,13,10,8,6,4,0],
+        [1,2,3,5,7,9,11,14,16,18,12,17,15,15,13,10,8,6,4]))
 
     @staticmethod
     def from_coco_keypoints(all_keypoints, w ,h):
